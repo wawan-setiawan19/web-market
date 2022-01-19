@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDetailPenjualanTable extends Migration
+class CreateDetailPenjualansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateDetailPenjualanTable extends Migration
      */
     public function up()
     {
-        Schema::create('detail_penjualan', function (Blueprint $table) {
+        Schema::create('detail_penjualans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_penjualan');
             $table->unsignedBigInteger('id_barang');
@@ -33,6 +33,6 @@ class CreateDetailPenjualanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_penjualan');
+        Schema::dropIfExists('detail_penjualans');
     }
 }

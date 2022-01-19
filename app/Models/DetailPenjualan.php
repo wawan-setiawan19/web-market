@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,6 +11,6 @@ class DetailPenjualan extends Model
         'id_barang',
         'jumlah',
         'harga_satuan',
-        'harga_total'
+        'harga_total',
     ];
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePenjualanTable extends Migration
+class CreatePenjualansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreatePenjualanTable extends Migration
      */
     public function up()
     {
-        Schema::create('penjualan', function (Blueprint $table) {
+        Schema::create('penjualans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->date('tanggal_penjualan');
-            $table->string('nama_konsumen');
+            $table->string('nama_konsumen',100);
             $table->text('alamat');
+            $table->date('tanggal_penjualan');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreatePenjualanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('penjualan');
+        Schema::dropIfExists('penjualans');
     }
 }

@@ -1,14 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Penjualan extends Model
 {
     protected $fillable = [
-        'tanggal_penjualan',
         'nama_konsumen',
-        'alamat'
+        'alamat',
+        'tanggal_penjualan'
     ];
 }
